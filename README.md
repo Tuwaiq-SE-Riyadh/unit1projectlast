@@ -1,107 +1,219 @@
-# Project-Unit-1
-Outline of the project for Unit 1 using HTML, CSS &amp; JavaScript
+# Project Title
+movie ticket booking site
+afflamy is :A site  to choosing and booking movie tickets
+
+Simple overview of use/purpose.
+
+## Description
+
+An in-depth paragraph about your project and overview of use.
+
+on the site , you can search for the movie you want to book,then read informaiton about it ,
+and evaluting it ,this makes it easy fo ryou to choose movie 
+provide add to cart and show message sucess if confirmed order .
+responsive from diffrent sizes.
+
+## Executing program
+
+* The main file that needs to be done to execute the program
+index.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aflamy</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--  -->
+</header>
+    <!-- Start Navbar -->
+    <div class="top-nav">
+      <a class="logo" href="#"><img src="images/Logo.png" alt=""></a>
+      <a class="cart-btn"><img src="images/cart2.png" width="50" alt=""></a>
+    </div>    
+    
 
 
+    <!-- Start Header -->
+    <header>
+      <div class="text">
+        <h1>Iron Man <span>(2021)</span></h1>
+        <div class="info"><span>2h 15m</span> <span>Action</span> <span>Adventure</span></div>
+        <div class="desc">After being held captive in an Afghan cave, Billionair Engineer Tony Stark Creates a unique weaponized suit of armor to fight evil.</div>
+      </div>
+    </header>
+    
+    <!-- <div="search" >
+        <input type="text"  id ="input" placeholder="Search"  class="searchi">
+        <button onclick="search()" >submit</button>
+      </div> -->
+  
+    <!-- section movies -->
+    <section class="movies">
+      <div="search" >
+        <input type="text"  id ="input" placeholder="Search"  class="searchi">
+        <button onclick="search()" >submit</button>
+      </div>
+
+      <div class="list-head">
+        <h2>Popular Movies</h2>
+        <a   clas= "Viewmore1" onclick="viewmore1(`Dune`)">View More</a>
+      </div> 
+      <div id="movie-list1" class="movie-list">
+        <!-- <div class="movie">
+          <img src="images/iron.jpg" alt="">
+          <div class="title">Film Title</div>
+          <div class="overview">
+            After being held captive in an Afghan cave, Billionair Engineer Tony Stark Creates a unique weaponized suit of armor to fight evil.</div>
+      </div>
+          <div class="actions">
+            <a href="" class="add-to-cart">Show Time</a>
+            <a href="" class="add-to-cart">Add to Cart</a>
+          </div>
+        </div>
+        <div class="movie">
+          <img src="images/iron.jpg" alt="">
+          <div class="title">Film Title</div>
+          <div class="overview">
+            After being held captive in an Afghan cave, Billionair Engineer Tony Stark Creates a unique weaponized suit of armor to fight evil.</div>
+      </div>
+          <div class="actions">
+            <a href="" class="add-to-cart">Show Time</a>
+            <a href="" class="add-to-cart">Add to Cart</a>
+          </div>
+        </div>
+        <div class="movie">
+          <img src="images/iron.jpg" alt="">
+          <div class="title">Film Title</div>
+          <div class="overview">
+            After being held captive in an Afghan cave, Billionair Engineer Tony Stark Creates a unique weaponized suit of armor to fight evil.</div>
+      </div>
+          <div class="actions">
+            <a href="" class="add-to-cart">Show Time</a>
+            <a href="" class="add-to-cart">Add to Cart</a>
+          </div>
+        </div>
+        <div class="movie">
+          <img src="images/iron.jpg" alt="">
+          <div class="title">Film Title</div>
+          <div class="overview">
+            After being held captive in an Afghan cave, Billionair Engineer Tony Stark Creates a unique weaponized suit of armor to fight evil.</div>
+      </div>
+          <div class="actions">
+            <a href="" class="add-to-cart">Show Time</a>
+            <a href="" class="add-to-cart">Add to Cart</a>
+          </div>
+        </div> -->
+      </div>
+      <div class="list-head">
+        <h2>Now Playing Movies</h2>
+        <a onclick= "viewmore2()">View More</a>
+      </div>
+      
+      <div id="movieList2" class="movie-list"></div>
+    </section>
 
 
+    <footer>
+      <div class="cols">
+        <!-- <div class="col">
+          <a href="">Home</a><a href="">Contact Us</a><a href="">Terms of service</a><a href="">About Us</a>
+        </div>
+        <div class="col">
+          <a href="">Live</a><a href="">FAQ</a><a href="">Premium</a><a href="">Privacy Policy</a>
+        </div>
+        <div class="col">
+          <a href="">Popular</a><a href="">Recently Released</a><a href="">250 IMDB</a><a href="">Advertise with us</a>
+        </div> -->
+        <div class="col2">
+          <img src="images/Logo.png" alt="">
+          <p class="lead">Aflamy is the world's leading community for creators to share, grow, and get hired.</p>
+        </div>
+      </div>
+          
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <p align="center">
-    Project for Unit 1
-    <br />
-  </p>
-</div>
+        <div class="last">
+          AFLAMY all Copyrights &copy; are Reserved 2021
+        </div>
+    </footer>
+
+    <!-- The Cart -->
+    <div class="cart-box">
+      <span class="close">&times;</span>
+      <!-- <div class="message">sucess</div>
+      <div class="error">please choose price</div> -->
+
+      <h2>Shopping Cart</h2>
+      <div>
+        <div class="items">
+         
+        </div>
+        <div class="form">
+          <form>
+            <div class="">
+              <label for="">Choose The Day</label>
+              <input type="date" required name="" id="">
+            </div>
+            <div>
+              <label for="">Choose the time</label>
+              <select>
+                <option value="0">-- Choose the time--</option>
+                <option value="1:45am">1:45am</option>
+                <option value="8:30:00pm">9:00pm</option>
+                <option value="9:00pm">9:00pm</option>
+                <option value="11:00pm">11:00pm</option>
+              </select>
+              <!-- <input type="time" required name="" id=""> -->
+            </div>
+            <div>
+              <label for=""> pay method</label>
+              <select>
+                <option value="0">-- pay method--</option>
+                <option value="card">card</option>
+                <option value="cash">cash</option>
+                
+              </select>
+              <!-- <input type="time" required name="" id=""> -->
+            </div>
+            <div class ="sum">
+              <label for="">Choose the price</label>
+              <select class="prices" onchange="document.querySelector('.total .value').innerHTML=this.value"> 
+                <option value="0">-- Choose the Price--</option>
+                <option value="200">VIP= 200SR</option>
+                <option value="100"> other= 100SR</option>
+              </select>
+
+            </div>
+            <button type="submit">Confirm Order</button>
+            <!-- <button type="submit">Clear Order</button> -->
+
+          </form>
+          
+        </div>
+      </div>
+      <div class="total">
+        <h2>Total :  <span class="value"></span></h2>
+      </div>
+      
+    </div>
 
 
+    <!-- Messages -->
+    <div class="message">Your request applied successfully</div>
+    <div class="error">Please Choose The Price</div>
+    <script src="js/main.js"></script>
+</body>
+</html>  
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+      
+```
 
+## The used API
+use api=  https://developers.themoviedb.org/3/search/search-movies
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-![screencapture-127-0-0-1-5501-2021-10-14-16_20_26](https://user-images.githubusercontent.com/63668672/137325603-26533686-071a-45a0-8239-2dec3ef6daab.png)
-
-We are going for it! First project for the course, the task is simple enough. Build a website using everything we have learned in this unit. Try to take advantaje of the homework assignments that you have done yourself in the past to be able to apply some functionality for it.
-
-Here are the requirements:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others.
-* You should implement DRY principles for the rest of your life :smile:
-* As a user you have to be able to navigate some information and display it.
-* There needs to be some wireframing.
-* There needs to be a readme.
-* There needs to be a plan before hand that needs to be aproved by your instructor.
-* The use of Bootstrap is optional.
-* You have to use an API out of the options we give to fetch some information from the JSON.
-* It needs to be responsive.
-
-BONUS
-* CRUD.
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-### List of APIs
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [Fake Store API](https://fakestoreapi.com/docs)
-* [POKEMON API](https://pokeapi.co/)
-* [Rick and Morty API](https://rickandmortyapi.com/)
-* [Weather API](https://rapidapi.com/community/api/open-weather-map)
-* [Movies API](https://developer.nytimes.com/docs/movie-reviews-api/1/overview)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- ROADMAP -->
-## What do you need to get it approved before you start working?
-
-- [Step by step using Trello](https://trello.com/es)
-- [Wireframes using Figma](https://www.figma.com/files/search?model_type=files&fuid=910903139620418288)
-- Meeting all the requirements.
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Create a GitHub repo.
-- [x] Create a folder and files for your project. (index.html, style folder, style.css, javascript.js, images folder, etc)
-- [] Start with your html layout, from big sections to small sections.
-- [] Conect to the API and do a fetch request.
-- [] Display the information from your API on your webpage
-- [] Apply styles to your webpage.
-    - [] MOBILE FIRST
-    - [] Chose a color pallet
-    - [] Chose a font
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+api to view movie contain diffrent types of url
 

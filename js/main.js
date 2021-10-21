@@ -36,6 +36,7 @@ fetch(url)
                                       <h3">${movies[i].title}</h3>
                                      <div class="actions">
                                      <a class="add-to-cart" onclick="addMovie('${IMG_URL}/${movies[i].poster_path}',' ${movies[i].title}")'>Add to Cart</a>
+                                     <div class="rate">${movies[i].vote_average}</div>
                                      </div>
                                   </div>
                          
@@ -60,7 +61,7 @@ fetch(url)
 
 
 
- function getMovies(searchText) {
+ function getMovies() {
      var url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${api_key}`;
      fetch(url)
          .then(response => response.json())
@@ -80,6 +81,7 @@ fetch(url)
                               </div>
                               <div class="actions">
                              <a class="add-to-cart" onclick='addMovie("${movies[i].title}"," ${IMG_URL}/${movies[i].poster_path}")'>Add to Cart</a>
+                             <div class="rate">${movies[i].vote_average}</div>
                              </div>
                           </div>
                          `
@@ -96,7 +98,7 @@ fetch(url)
          );
  }
  getMovies()
- function viewmore1(searchText){
+ function viewmore1(){
     var url = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${api_key}`;
     fetch(url)
         .then(response => response.json())
@@ -118,6 +120,7 @@ fetch(url)
                              </div>
                              <div class="actions">
                             <a class="add-to-cart" onclick='addMovie("${movies[i].title}"," ${IMG_URL}/${movies[i].poster_path}")'>Add to Cart</a>
+                            <div class="rate">${movies[i].vote_average}</div>
                             </div>
                          </div>
                         `
@@ -148,6 +151,7 @@ fetch(url)
                             
                             <div class="actions">
                                 <a class="add-to-cart" onclick='addMovie("${movies[i].title}","${IMG_URL}/${movies[i].poster_path}")'>Add to Cart</a>
+                                <div class="rate">${movies[i].vote_average}</div>
                             </div>
                         </div>
                         `
@@ -174,12 +178,13 @@ function viewmore2() {
                             <div class="info">
                                 <h3>Movie Info</h3>
                                 <p>${movies[i].overview}</p>
-                                <p style="margin-top:20px">Price : $<span class="price">200</span></p>
+                                <p style="margin-top:20px">Price : <span class="price">200</span></p>
                             </div>
                             
                             <div class="actions">
                                 <a class="add-to-cart" onclick='addMovie("${movies[i].title}","${IMG_URL}/${movies[i].poster_path}")'>Add to Cart</a>
                             </div>
+                            <div class="rate">${movies[i].vote_average}</div>
                         </div>
                         `
                  {
@@ -195,7 +200,7 @@ function viewmore2() {
 
 
 
-
+//open&close cart
 
  document.querySelector('.cart-btn').onclick = function () {
     document.querySelector('.cart-box').classList.toggle('opened')
@@ -209,17 +214,15 @@ document.querySelector('.cart-box .close').onclick = function () {
 
 
 
-
-
-
-
 var cartForm = document.querySelector('.form form')
 cartForm.onsubmit = function (e) {
     e.preventDefault()
     if (document.querySelector('.form form select').value == "0") {
-        alert("Please Choose the price")
+        document.querySelector('.error').style.display="block";
+        setTimeout(function(){ document.querySelector('.error').style.display="none"; }, 3000);
     } else {
-        alert("You request applied successfully.")
+        document.querySelector('.message').style.display="block";
+        setTimeout(function(){ document.querySelector('.message').style.display="none"; }, 2000);
         cartForm.reset();
         document.querySelector('.cart-box').classList.toggle('opened')
         document.querySelector('body').classList.toggle('fixed')
@@ -250,7 +253,7 @@ document.querySelector('.cart-box .items').innerHTML = `
 var total = 0;
 document.querySelector('.total .value').innerHTML = total;
 document.querySelector('.sum .prices').onchange = function () {
-    alert(this.value, "Test")
+    // alert(this.value, "Test")
     if (this.value == "100") {
         total = 100;
     } else if (this.value == "200") {

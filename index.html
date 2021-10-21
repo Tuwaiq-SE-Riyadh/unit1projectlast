@@ -14,13 +14,8 @@
     <div class="top-nav">
       <a class="logo" href="#"><img src="images/Logo.png" alt=""></a>
       <a class="cart-btn"><img src="images/cart2.png" width="50" alt=""></a>
-    
-    
     </div>    
     
-        
-      
-  
 
 
     <!-- Start Header -->
@@ -125,16 +120,7 @@
           AFLAMY all Copyrights &copy; are Reserved 2021
         </div>
     </footer>
-    <script src="js/main.js"></script>
-</body>
-</html>
 
-
-
-
-<div class="form">
-  <table>
-  <form>
     <!-- The Cart -->
     <div class="cart-box">
       <span class="close">&times;</span>
@@ -163,6 +149,15 @@
               </select>
               <!-- <input type="time" required name="" id=""> -->
             </div>
+            <div>
+              <label for=""> pay method</label>
+              <select>
+                <option value="0">-- pay method--</option>
+                <option value="card">card</option>
+                <option value="cash">cash</option>
+              </select>
+              <!-- <input type="time" required name="" id=""> -->
+            </div>
             <div class ="sum">
               <label for="">Choose the price</label>
               <select class="prices" onchange="document.querySelector('.total .value').innerHTML=this.value"> 
@@ -185,6 +180,10 @@
       
     </div>
 
+
+    <!-- Messages -->
+    <div class="message">Your request applied successfully</div>
+    <div class="error">Please Choose The Price</div>
     <script src="js/main.js"></script>
 </body>
 </html>  
