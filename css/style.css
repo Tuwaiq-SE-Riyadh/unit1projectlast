@@ -449,12 +449,12 @@ select {
     border-radius: 4px;
     
  }
- .prices {
+ /* .prices {
     width: 80%;
     padding: 6px 6px;
     border-radius: 4px;
     
- }
+ } */
  form input,form select{
      width:200px;
  }
